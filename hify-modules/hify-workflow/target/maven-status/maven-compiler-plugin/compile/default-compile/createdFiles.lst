@@ -1,0 +1,4 @@
+com/hify/modules/workflow/web/PlaceholderWeb.class
+com/hify/modules/workflow/domain/PlaceholderDomain.class
+com/hify/modules/workflow/infra/PlaceholderInfra.class
+com/hify/modules/workflow/api/PlaceholderApi.class

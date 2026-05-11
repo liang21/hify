@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+      - org.redisson.spring.starter.RedissonAutoConfiguration
+
+logging:
+  level:
+    root: INFO
+    com.hify: DEBUG

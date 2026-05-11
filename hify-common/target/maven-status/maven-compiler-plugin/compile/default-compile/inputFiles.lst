@@ -1,0 +1,10 @@
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/exception/ErrorCode.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/exception/BizException.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/web/Result.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/util/RedisUtil.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/web/PageResult.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/po/BasePo.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/config/RedisConfig.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/exception/GlobalExceptionHandler.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/config/MybatisPlusConfig.java
+/Users/edy/zane/hify/hify-common/src/main/java/com/hify/common/config/MybatisPlusProperties.java

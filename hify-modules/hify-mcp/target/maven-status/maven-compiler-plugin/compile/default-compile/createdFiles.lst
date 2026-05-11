@@ -1,0 +1,4 @@
+com/hify/modules/mcp/web/PlaceholderWeb.class
+com/hify/modules/mcp/domain/PlaceholderDomain.class
+com/hify/modules/mcp/infra/PlaceholderInfra.class
+com/hify/modules/mcp/api/PlaceholderApi.class

@@ -1,0 +1,4 @@
+com/hify/modules/conversation/web/PlaceholderWeb.class
+com/hify/modules/conversation/domain/PlaceholderDomain.class
+com/hify/modules/conversation/api/PlaceholderApi.class
+com/hify/modules/conversation/infra/PlaceholderInfra.class

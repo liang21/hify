@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.hify</groupId>
+    <artifactId>hify-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Hify Parent</name>
+    <description>Hify - Internal AI Agent Platform</description>
+
+    <modules>
+        <module>hify-common</module>
+        <module>hify-modules</module>
+        <module>hify-app</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <spring-boot.version>3.2.0</spring-boot.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <mysql.version>8.0.33</mysql.version>
+        <druid.version>1.2.20</druid.version>
+        <redisson.version>3.25.0</redisson.version>
+        <okhttp.version>4.12.0</okhttp.version>
+        <lombok.version>1.18.30</lombok.version>
+        <hutool.version>5.8.23</hutool.version>
+        <resilience4j.version>2.1.0</resilience4j.version>
+        <pgvector.version>0.1.4</pgvector.version>
+        <servlet-api.version>6.0.0</servlet-api.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Common Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Model Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Agent Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-agent</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Conversation Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-conversation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Knowledge Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-knowledge</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Workflow Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-workflow</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- MCP Module -->
+            <dependency>
+                <groupId>com.hify</groupId>
+                <artifactId>hify-mcp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- MyBatis-Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- MySQL Driver -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- Druid Connection Pool -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-3-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- Redisson (Redis Client) -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- OkHttp -->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+
+            <!-- Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- Hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- Resilience4j (Circuit Breaker) -->
+            <dependency>
+                <groupId>io.github.resilience4j</groupId>
+                <artifactId>resilience4j-spring-boot3</artifactId>
+                <version>${resilience4j.version}</version>
+            </dependency>
+
+            <!-- pgvector -->
+            <dependency>
+                <groupId>com.pgvector</groupId>
+                <artifactId>pgvector</artifactId>
+                <version>${pgvector.version}</version>
+            </dependency>
+
+            <!-- Jakarta Servlet API (for SSE) -->
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

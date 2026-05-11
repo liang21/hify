@@ -1,0 +1,4 @@
+com/hify/modules/model/domain/PlaceholderDomain.class
+com/hify/modules/model/api/PlaceholderApi.class
+com/hify/modules/model/web/PlaceholderWeb.class
+com/hify/modules/model/infra/PlaceholderInfra.class
